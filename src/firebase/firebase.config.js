@@ -2,15 +2,15 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+// import.meta.env.VITE_apiKey
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAl8EOTp_j8hQ-ZmiaeibdCzmjCks5jwBM",
-  authDomain: "avenger-toy.firebaseapp.com",
-  projectId: "avenger-toy",
-  storageBucket: "avenger-toy.appspot.com",
-  messagingSenderId: "584876172310",
-  appId: "1:584876172310:web:2795d7fa4adaf7252b8137"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId ,
+  storageBucket:import.meta.env.VITE_storageBucket ,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId ,
+  appId:import.meta.env.VITE_appId 
 };
 
 // Initialize Firebase
