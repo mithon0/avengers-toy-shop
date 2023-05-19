@@ -4,10 +4,36 @@ import { Link } from 'react-router-dom';
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import toast, { Toaster } from 'react-hot-toast';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Register = () => {
+    const googleProvider = new GoogleAuthProvider();
+    const gitProvider = new GithubAuthProvider();
 
-    const { registerUser, updateUser } = useContext(AuthContext);
+    const { registerUser, updateUser, googleSignIn, gitHubSignIn } = useContext(AuthContext);
+
+    const googlehandler = () => {
+        googleSignIn(googleProvider)
+            .then(result => {
+                console.log(result.user);
+                toast.success('Sign in Success')
+            })
+            .catch(err => {
+                console.log(err.message);
+
+            })
+    }
+    const gitHublehandler = () => {
+        gitHubSignIn(gitProvider)
+            .then(result => {
+                console.log(result.user);
+                toast.success('Sign in Success')
+            })
+            .catch(err => {
+                console.log(err.message);
+
+            })
+    }
 
     const registerHeandlear = event => {
 
@@ -33,7 +59,7 @@ const Register = () => {
                 toast.error(err.message)
             })
         updateUser(userInfo);
-            
+
 
     }
     return (
@@ -48,8 +74,8 @@ const Register = () => {
                 <input className='btn btn-primary w-80 ' type="submit" value="Login" />
                 <p className='mt-5'>Already have an Account? <Link className='text-blue-600' to='/login'>Please Login</Link></p>
                 <h3>Or</h3>
-                <button className='btn btn-outline btn-primary w-80 mb-5'><BsGoogle className='mx-2 text-xl' />  Sign In With GooGle</button><br />
-                <button className='btn btn-outline btn-primary w-80 mb-5'><BsGithub className='mx-2 text-xl' />Sign In With Github</button>
+                <button onClick={googlehandler} className='btn btn-outline btn-primary w-80 mb-5'><BsGoogle className='mx-2 text-xl' />  Sign In With GooGle</button><br />
+                <button onClick={gitHublehandler} className='btn btn-outline btn-primary w-80 mb-5'><BsGithub className='mx-2 text-xl' />Sign In With Github</button>
             </form>
             <Toaster
             />
