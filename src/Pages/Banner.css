@@ -1,0 +1,11 @@
+.title:hover{
+    text-shadow: 0 0 10px rgba(61, 134, 230, 0.795);
+   
+}
+img:hover{
+    text-shadow: 0 0 20px gold;
+}
+
+p:hover{
+    text-shadow: 0 0 10px rgba(61, 134, 230, 0.795);
+}
