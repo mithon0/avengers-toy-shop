@@ -29,7 +29,7 @@ const Nav = () => {
                             user?<Link>My Toys</Link>:<></>
                         }</li>
                         <li>{
-                            user?<Link>Add A Toy</Link>:<></>
+                            user?<Link to='/add'>Add A Toy</Link>:<></>
                         }</li>
                         
                         <li><Link>Blogs</Link></li>
@@ -47,7 +47,7 @@ const Nav = () => {
                             user?<Link>My Toys</Link>:<></>
                         }</li>
                         <li>{
-                            user?<Link>Add A Toy</Link>:<></>
+                            user?<Link to='/add'>Add A Toy</Link>:<></>
                         }</li>
                         
                     <li><Link>Blogs</Link></li>
