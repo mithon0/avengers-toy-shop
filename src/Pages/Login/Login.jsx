@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { BsGoogle,BsGithub } from "react-icons/bs";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
-    const {user} =useContext(AuthContext)
+    const {user,loginUser} =useContext(AuthContext)
     
     const loginHandler=event=>{
         event.preventDefault()
@@ -16,6 +16,15 @@ const Login = () => {
         const password =form.password.value;
         // console.log(email,password);
         form.reset();
+        loginUser(email,password)
+        .then(result=>{
+            const loggedUser=result.user;
+            console.log(loggedUser);
+            toast.success('Login Success')
+        })
+        .catch(err=>{
+            toast.error(err.message)
+        })
 
     }
     return (
@@ -31,6 +40,7 @@ const Login = () => {
                 <button className='btn btn-outline btn-primary w-80 mb-5'><BsGoogle className='mx-2 text-xl'/>  Sign In With GooGle</button><br />
                 <button className='btn btn-outline btn-primary w-80 mb-5'><BsGithub className='mx-2 text-xl'/>Sign In With Github</button>
             </form>
+            <Toaster/>
         </div>
     );
 };
