@@ -23,10 +23,10 @@ const Nav = () => {
                     <ul className=" font-semibold menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
                         <li>{
-                            user?<Link>All Toys</Link>:<></>
+                            user?<Link to='/all-toys'>All Toys</Link>:<></>
                         }</li>
                         <li>{
-                            user?<Link>My Toys</Link>:<></>
+                            user?<Link to='/usertoys'>My Toys</Link>:<></>
                         }</li>
                         <li>{
                             user?<Link to='/add'>Add A Toy</Link>:<></>
@@ -41,10 +41,10 @@ const Nav = () => {
                 <ul className="menu menu-horizontal px-1 font-semibold">
                     <li><Link to='/'>Home</Link></li>
                     <li>{
-                            user?<Link>All Toys</Link>:<></>
+                            user?<Link to='/all-toys'>All Toys</Link>:<></>
                         }</li>
                         <li>{
-                            user?<Link>My Toys</Link>:<></>
+                            user?<Link to='/usertoys'>My Toys</Link>:<></>
                         }</li>
                         <li>{
                             user?<Link to='/add'>Add A Toy</Link>:<></>
