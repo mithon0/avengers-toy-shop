@@ -11,7 +11,7 @@ useEffect(()=>{
 
     return (
         <div>
-            <h1 className='text-center text-2xl font-semibold'>Gallery</h1>
+            <h1 className='text-center md:text-2xl font-semibold'>Gallery</h1>
             <hr className='m-10 border border-y-2' />
             <div className=' toy-galary'>
                 <div className='ml-5 mt-2'>
@@ -21,7 +21,7 @@ useEffect(()=>{
                         <p>Action figures were created by DC Comics and manufactured by various toy companies, these figures were made of various materials such as wood, tin, and plastic.</p>
                     </div>
                 </div>
-                <div className='ml-5 grid grid-cols-2'> 
+                <div className='md:ml-5 grid grid-cols-2'> 
                     {
                         galary.map(g=><div>
                             <div className="relative my-5 mx-auto rounded-lg w-96 glass">
