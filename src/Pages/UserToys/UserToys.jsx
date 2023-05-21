@@ -50,6 +50,14 @@ const UserToys = () => {
             .then(res=>res.json())
             .then(data=>{
                 console.log(data);
+                if(data.modifiedCount > 0){
+                    alert('Updated success');
+                    const remaining= userToys.filter(toy=>toy._id !==id);
+                    const  update = userToys.find(toy=>toy._id ===id);
+                    update.status ='confirm';
+                    const newToys =[update,...remaining];
+                    setUserToys(newToys);
+                }
             })
         }
 

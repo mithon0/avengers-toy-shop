@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UserToyCard = ({ UserToy,deleteHandler,updateHandler }) => {
-    const { categories, description, email, name, picture, quantity, price, rating, sellerName, _id } = UserToy;
+    const {status, categories, description, email, name, picture, quantity, price, rating, sellerName, _id } = UserToy;
     return (
 
         <tr className=' bg-sky-200'>
@@ -32,7 +32,8 @@ const UserToyCard = ({ UserToy,deleteHandler,updateHandler }) => {
             </td>
             
             <th>
-                <button onClick={()=>updateHandler(_id)} className="btn ">Update</button>
+                {   status === 'confirm'?<small className='text-green-600 font-bold'>Updated</small>:
+                    <button onClick={()=>updateHandler(_id)} className="btn ">Update</button>}
             </th>
             <th>
                 <button onClick={()=>deleteHandler(_id)} className="btn btn-error">Delete</button>
