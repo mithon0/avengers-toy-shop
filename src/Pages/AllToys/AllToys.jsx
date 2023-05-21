@@ -10,7 +10,7 @@ const AllToys = () => {
     }
 
     useEffect(()=>{
-        fetch('https://avenger-toy-server.vercel.app/toys')
+        fetch('https://avenger-toy-server-mithon0.vercel.app/toys')
         .then(res=>res.json())
         .then(data=>setToys(data))
     },[])

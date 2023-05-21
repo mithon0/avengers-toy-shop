@@ -44,7 +44,7 @@ import Blog from "../Pages/Blog/Blog";
         {
           path:'/details/:id',
           element:<PrivetRoutes><Details></Details></PrivetRoutes>,
-          loader:({params})=>fetch(`https://avenger-toy-server.vercel.app/to?id=${params.id}`)
+          loader:({params})=>fetch(`https://avenger-toy-server-mithon0.vercel.app/to?id=${params.id}`)
           
         },
         {

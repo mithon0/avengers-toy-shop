@@ -4,7 +4,7 @@ import './Galary.css'
 const Galary = () => {
 const [galary,setGalary]=useState([]);
 useEffect(()=>{
-    fetch('https://avenger-toy-server.vercel.app/galary')
+    fetch('https://avenger-toy-server-mithon0.vercel.app/galary')
     .then(res=>res.json())
     .then(data=>setGalary(data))
 },[])

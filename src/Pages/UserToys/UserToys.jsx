@@ -9,7 +9,7 @@ const UserToys = () => {
     
 
     useEffect(()=>{
-        fetch(`https://avenger-toy-server.vercel.app/toy?email=${email}`)
+        fetch(`https://avenger-toy-server-mithon0.vercel.app/toy?email=${email}`)
         .then(res=>res.json())
         .then(data=>setUserToys(data))
     },[])
@@ -20,7 +20,7 @@ const UserToys = () => {
 
             const proceed=confirm('are you sure want to delete?');
     if(proceed){
-        fetch(`https://avenger-toy-server.vercel.app/toy/${id}`,{
+        fetch(`https://avenger-toy-server-mithon0.vercel.app/toy/${id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())
@@ -40,7 +40,7 @@ const UserToys = () => {
 
 
         const updateHandler =(id)=>{
-            fetch(`https://avenger-toy-server.vercel.app/toy/${id}`,{
+            fetch(`https://avenger-toy-server-mithon0.vercel.app/toy/${id}`,{
                 method:"PATCH",
                 headers:{
                     'content-type':'application/json',
