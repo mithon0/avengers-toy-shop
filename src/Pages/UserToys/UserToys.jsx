@@ -34,8 +34,25 @@ const UserToys = () => {
 
             })
     }
+
             
         }
+
+
+        const updateHandler =(id)=>{
+            fetch(`http://localhost:5000/toy/${id}`,{
+                method:"PATCH",
+                headers:{
+                    'content-type':'application/json',
+                },
+                body:JSON.stringify({status:'confirm'})
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data);
+            })
+        }
+
     return (
         <div className='bg-slate-100'>
             <h1 className='text-center text-5xl font-bold m-4'>My Toys</h1>
@@ -50,6 +67,7 @@ const UserToys = () => {
         key={t._id}
         UserToy={t}
         deleteHandler={deleteHandler}
+        updateHandler={updateHandler}
         ></UserToyCard>)
     }
      

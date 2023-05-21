@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserToyCard = ({ UserToy,deleteHandler }) => {
+const UserToyCard = ({ UserToy,deleteHandler,updateHandler }) => {
     const { categories, description, email, name, picture, quantity, price, rating, sellerName, _id } = UserToy;
     return (
 
@@ -32,7 +32,7 @@ const UserToyCard = ({ UserToy,deleteHandler }) => {
             </td>
             
             <th>
-                <button className="btn ">Update</button>
+                <button onClick={()=>updateHandler(_id)} className="btn ">Update</button>
             </th>
             <th>
                 <button onClick={()=>deleteHandler(_id)} className="btn btn-error">Delete</button>

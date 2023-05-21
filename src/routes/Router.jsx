@@ -28,7 +28,7 @@ import Details from "../Pages/Details/Details";
         },
         {
           path:'/add',
-          element:<AddToy></AddToy>
+          element:<PrivetRoutes><AddToy></AddToy></PrivetRoutes>
         },
         {
           path:'/usertoys',
