@@ -14,6 +14,7 @@ const Nav = () => {
     const email = loggedUser?.email;
     console.log(photo);
     return (
+
         <div className="navbar bg-red-100">
             <div className="navbar-start">
                 <div className="dropdown">
@@ -23,7 +24,7 @@ const Nav = () => {
                     <ul className=" font-semibold menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/all-toys'>All Toys</Link></li>
-                        <li><Link>Blogs</Link></li>
+                        <li><Link to="/blog">Blogs</Link></li>
                         <li>{
                             user?<Link to='/usertoys'>My Toys</Link>:<></>
                         }</li>
@@ -39,13 +40,16 @@ const Nav = () => {
                 <ul className="menu menu-horizontal px-1 font-semibold">
                 <li><Link to='/'>Home</Link></li>
                         <li><Link to='/all-toys'>All Toys</Link></li>
-                        <li><Link>Blogs</Link></li>
+                        <li><Link to="/blog">Blogs</Link></li>
                         <li>{
                             user?<Link to='/usertoys'>My Toys</Link>:<></>
                         }</li>
                         <li>{
                             user?<Link to='/add'>Add A Toy</Link>:<></>
                         }</li>
+                        {
+                           user? <li><a onClick={logOutHandler}>LogOut</a></li>:<></>
+                        }
                 </ul>
             </div>
             <div className="navbar-end">
@@ -67,7 +71,10 @@ const Nav = () => {
                 }
 
             </div>
+            
         </div>
+
+
     );
 };
 

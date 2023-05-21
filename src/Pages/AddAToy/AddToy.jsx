@@ -36,7 +36,7 @@ const AddToy = () => {
         form.reset();
         toast.success('Toy added Successfully');
         console.log(addToys);
-        fetch('http://localhost:5000/toy', {
+        fetch('https://avenger-toy-server.vercel.app/toy', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

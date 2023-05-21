@@ -9,6 +9,7 @@ import AllToys from "../Pages/AllToys/AllToys";
 import PrivetRoutes from "./PrivetRoutes";
 import Details from "../Pages/Details/Details";
 import Error from "../Pages/Error/Error";
+import Blog from "../Pages/Blog/Blog";
 
  const router = createBrowserRouter([
     {
@@ -43,8 +44,12 @@ import Error from "../Pages/Error/Error";
         {
           path:'/details/:id',
           element:<PrivetRoutes><Details></Details></PrivetRoutes>,
-          loader:({params})=>fetch(`http://localhost:5000/to?id=${params.id}`)
+          loader:({params})=>fetch(`https://avenger-toy-server.vercel.app/to?id=${params.id}`)
           
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         }
       ]
     },

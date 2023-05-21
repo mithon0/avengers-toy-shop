@@ -8,17 +8,17 @@ const ShopCategory = () => {
   const [category3, setcategory3] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:5000/toys/Avengers')
+    fetch('https://avenger-toy-server.vercel.app/toys/Avengers')
       .then(res => res.json())
       .then(data => setcategory1(data))
   }, [])
   useEffect(() => {
-    fetch('http://localhost:5000/toys/Superman')
+    fetch('https://avenger-toy-server.vercel.app/toys/Superman')
       .then(res => res.json())
       .then(data => setcategory2(data))
   }, [])
   useEffect(() => {
-    fetch('http://localhost:5000/toys/Tranformar')
+    fetch('https://avenger-toy-server.vercel.app/toys/Tranformar')
       .then(res => res.json())
       .then(data => setcategory3(data))
   }, [])
