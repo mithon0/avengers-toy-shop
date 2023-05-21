@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 const ShopCategory = () => {
@@ -43,7 +44,7 @@ const ShopCategory = () => {
                   <h1>price:${c1.price}</h1>
                   <h1>rating: {c1.rating}</h1>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">View Details</button>
+                    <button className="btn btn-primary"><Link to={`/details/${c1._id}`}>Details</Link></button>
                   </div>
                 </div>
               </div>
@@ -64,7 +65,7 @@ const ShopCategory = () => {
                 <h1>price:${c2.price}</h1>
                 <h1>rating: {c2.rating}</h1>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary">View Details</button>
+                  <button className="btn btn-primary"><Link to={`/details/${c2._id}`}>Details</Link></button>
                 </div>
               </div>
             </div>
@@ -83,7 +84,7 @@ const ShopCategory = () => {
                 <h1>price:${c3.price}</h1>
                 <h1>rating: {c3.rating}</h1>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary">View Details</button>
+                  <button className="btn btn-primary"><Link to={`/details/${c3._id}`}>Details</Link></button>
                 </div>
               </div>
             </div>

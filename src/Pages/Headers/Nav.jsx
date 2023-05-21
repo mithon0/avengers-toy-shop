@@ -22,9 +22,8 @@ const Nav = () => {
                     </label>
                     <ul className=" font-semibold menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
-                        <li>{
-                            user?<Link to='/all-toys'>All Toys</Link>:<></>
-                        }</li>
+                        <li><Link to='/all-toys'>All Toys</Link></li>
+                        <li><Link>Blogs</Link></li>
                         <li>{
                             user?<Link to='/usertoys'>My Toys</Link>:<></>
                         }</li>
@@ -32,25 +31,21 @@ const Nav = () => {
                             user?<Link to='/add'>Add A Toy</Link>:<></>
                         }</li>
                         
-                        <li><Link>Blogs</Link></li>
                     </ul>
                 </div>
                 <img className="w-36" src={logo} alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold">
-                    <li><Link to='/'>Home</Link></li>
-                    <li>{
-                            user?<Link to='/all-toys'>All Toys</Link>:<></>
-                        }</li>
+                <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/all-toys'>All Toys</Link></li>
+                        <li><Link>Blogs</Link></li>
                         <li>{
                             user?<Link to='/usertoys'>My Toys</Link>:<></>
                         }</li>
                         <li>{
                             user?<Link to='/add'>Add A Toy</Link>:<></>
                         }</li>
-                        
-                    <li><Link>Blogs</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">

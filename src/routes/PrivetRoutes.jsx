@@ -8,12 +8,14 @@ const PrivetRoutes = ({children}) => {
         if(user?.email){
             return children
         }
+       
+            
+       
         if(loading==false){
-            return<progress className=" text-center progress w-56"></progress>
+            return <div><h1>please login</h1> <progress className=" text-center mx-auto progress w-56"></progress></div>
         }
-        console.log(loading);
+        return <Navigate to="/login" replace></Navigate>
     
-    return <Navigate to="/login"></Navigate>
 };
 
 export default PrivetRoutes;

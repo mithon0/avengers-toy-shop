@@ -9,7 +9,7 @@ const UserToys = () => {
     
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/toys?email=${email}`)
+        fetch(`http://localhost:5000/toy?email=${email}`)
         .then(res=>res.json())
         .then(data=>setUserToys(data))
     },[])
@@ -17,13 +17,24 @@ const UserToys = () => {
 
         const deleteHandler=(id)=>{
             console.log(id);
-            fetch(`http://localhost:5000/toys/${id}`,{
+
+            const proceed=confirm('are you sure want to delete?');
+    if(proceed){
+        fetch(`http://localhost:5000/toy/${id}`,{
                 method:"DELETE"
             })
             .then(res=>res.json())
             .then(data=>{
                 console.log(data);
+                if(data.deletedCount >0){
+                    alert('deleted success');
+                    const remaining= userToys.filter(toy=>toy._id !==id);
+                    setUserToys(remaining)
+                }
+
             })
+    }
+            
         }
     return (
         <div className='bg-slate-100'>
