@@ -4,12 +4,12 @@ const Banner = () => {
     return (
         <div className="relative w-full my-10 ">
            <img src={img} className="w-full  rounded-lg" alt="" /> 
-           <div className="absolute top-0 flex w-full bg-gradient-to-r from-[#151515] to-[#15151500]  transform h-[520px] rounded-lg ">
-            <div className='w-2/3  m-10 mx-auto text-center'>
-                <h1 className='text-8xl text-red-100'>WEllCOME to AVENGER-TOY STORE</h1>
+           <div className="absolute top-0 flex w-full bg-gradient-to-r from-[#151515] to-[#15151500]  transform md:h-[520px] rounded-lg ">
+            <div className='w-2/3 md:mt-16   mx-auto text-center'>
+                <h1 className='md:text-8xl text-3xl  text-red-100'>WEllCOME to AVENGER-TOY STORE</h1>
             
-            <p className=' text-red-100'>
-            Kids love for superheroes is unexplainable. More often than not, kids love to imitate their favourite superheroes. Its okay for kids to love these characters as they preach goodness and kindness in the world. If your kid is an Avengers fan, you can give him/her some Avengers toys that will surely put them on cloud 9. Online stores have Avengers Endgame toys, Marvel Avengers toys, Thanos toys, Iron Man toys, Hulk toys
+            <p className=' text-red-100 '>
+            Kids love for superheroes is unexplainable. More often than not, kids love to imitate their favourite superheroes.
             </p>
             <button className='btn mt-5 btn-primary  px-4 w-40 '>GetStarted</button>
             </div>
